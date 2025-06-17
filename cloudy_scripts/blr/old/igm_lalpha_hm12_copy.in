@@ -1,0 +1,26 @@
+title Ly alpha forest cloud
+#
+# commands controlling continuum =========
+# ionized by cosmic background
+# plus quasar/starburst continuum 
+cmb z=0.45
+table hm12 z = 0.45
+#
+# commands for density & abundances =========
+hden -2
+metals -1.5  ##reduce all heavy elements by 1.5 dex
+#
+# commands controlling geometry  =========
+stop neutral column density 15
+double  ## mimic two-sided photoionization
+#
+# other commands for details     =========
+iterate to convergence## must iterate since optically thin
+#
+# commands controlling output    =========
+print line faint -1
+set save prefix "igm_lalpha_hm12"
+save performance ".per"
+save overview last ".ovr"
+save dr last ".dr"
+save results last ".rlt"

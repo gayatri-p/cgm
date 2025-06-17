@@ -1,0 +1,6 @@
+c23.01/
+pluto/
+visit/
+*.tar.gz
+__pycache__/
+*.pdf

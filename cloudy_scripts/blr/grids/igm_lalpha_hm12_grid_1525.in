@@ -1,0 +1,19 @@
+title Ly alpha forest cloud
+cmb z=0.45
+table hm12 z=0.45
+constant temperature 1e4k
+hden -2 vary
+grid range from -4.25 to 1 with 0.25 dex steps
+metals -1.5 vary
+grid range from -0.25 to 1 with 0.25 dex steps
+stop neutral column density 15.25
+double  ## mimic two-sided photoionization
+iterate to convergence ## must iterate since optically thin
+# commands controlling output    =========
+print line faint -1
+set save prefix "igm_lalpha_hm12_grid_1525"
+save grid last ".grd"
+save species column density last ".col" all
+save averages ".avr" last no clobber
+temperature, hydrogen 1 over radius
+end of averages
