@@ -4,3 +4,4 @@ visit/
 *.tar.gz
 __pycache__/
 *.pdf
+venv/

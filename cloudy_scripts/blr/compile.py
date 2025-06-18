@@ -3,7 +3,7 @@ from cloudy_fit_lib import *
 import pickle
 
 # change this line as required
-rootdir = '/home/gayatri/Documents/cloudy_scripts/blr/grids/'
+rootdir = '/usr3/project/gayatri.p/Documents/cloudy_scripts/blr/grids/'
 
 # edit all nHIs
 logN_HI_min_main = 12
@@ -66,7 +66,7 @@ for i in range(len(logN_HI_arr_main)):
                 if s not in species_logN_samples_final.keys():
                     species_logN_samples_final[s] = -99.*np.ones((len(logN_HI_arr_main), 
                                                             len(log_hdens_arr_main),
-                                                            len(log_metals_arr_main)))
+                                                           len(log_metals_arr_main)))
                 
                 # Check for converged logN(HI)
                 if np.round(log_col_dens[0], 2) == logN_HI:

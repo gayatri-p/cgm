@@ -7,7 +7,7 @@ from scipy.interpolate import RegularGridInterpolator
 import pickle
 import scienceplots
 
-rootdir = '/home/gayatri/Documents/cloudy_scripts/blr/grids/'
+rootdir = '/usr3/project/gayatri.p/Documents/cloudy_scripts/blr/grids/'
 plt.style.use(['science', 'notebook', 'no-latex'])
 plt.rcParams.update({
     # "font.family": "serif",   # specify font family here
@@ -85,7 +85,7 @@ fig, ax = plt.subplots(1,1, figsize=(10,7))
   
 ax.text(x=0.02,y=0.9,s=r'$\mathrm{[X/H]}$ = ' + '{}'.format(log_m_test), fontsize=14, transform=ax.transAxes)
 ax.text(x=0.02,y=0.85,s=r'$\log N$(HI) = ' + '{}'.format(logN_HI_test), fontsize=14, transform=ax.transAxes)
-ax.axhline(logN_HI_test, linestyle='--', lw=1, color='k')
+ax.axhline(logN_HI_test, linestyle='--', lw=1, color='k', label='HI')
 
 # Plot column densities
 species = ['CII', 'CIII', 'NII', 'NIII', "SiII", 'SiIII', 'SiIV']
@@ -113,5 +113,6 @@ ax_copy_label.set_xlabel(r'$\log [n_\mathrm{H} (\mathrm{cm}^{-2})]$', labelpad=3
 ax_copy_label.xaxis.set_label_position('top')
 
 ax.legend()
-plt.tight_layout()
+#plt.tight_layout()
+plt.savefig(f'plots/{logN_HI_test}.png')
 plt.show()
