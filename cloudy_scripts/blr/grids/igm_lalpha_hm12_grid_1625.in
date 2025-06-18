@@ -1,6 +1,6 @@
 title Ly alpha forest cloud
-cmb z=0.45
-table hm12 z=0.45
+cmb z=0.226
+table hm12 z=0.226
 constant temperature 1e4k
 hden -2 vary
 grid range from -4.25 to 1 with 0.25 dex steps
